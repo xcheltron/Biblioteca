@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="353.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.controllers.LogInController">
+   <children>
+      <Label fx:id="label1" alignment="TOP_LEFT" text="Bienvenido Log-In" textAlignment="CENTER">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets bottom="20.0" top="80.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Corbel" size="29.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER" prefHeight="239.0" prefWidth="365.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <TextField fx:id="txtEmail" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="\@Emaiil">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </TextField>
+            <PasswordField fx:id="txtPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="175.0" promptText="Password">
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+            </PasswordField>
+            <Button fx:id="btnLogIn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#HandlerLogIn" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: #3030FF;" text="Log-In" textAlignment="CENTER" textFill="#fff6f6">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>

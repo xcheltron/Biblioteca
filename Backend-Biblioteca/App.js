@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import connection from "./dababase.js";
 import routerRol from "./routes/rol.routes.js";
 import routerRegister from "./routes/register.routes.js";
@@ -9,6 +10,7 @@ const app = express();
 
 //configurations
 app.use(express.json())
+app.use(cors())
 
 //Rutas
 app.use('/rol', routerRol)
