@@ -7,7 +7,7 @@ CREATE TABLE Person(
 	idRol INT,
 	_Name VARCHAR(50),
 	Phone_number VARCHAR(10),
-	Email VARCHAR(100),
+	Email VARCHAR(100) UNIQUE,
 	_Password VARCHAR(100), 
 	FOREIGN KEY (idRol) REFERENCES Rol(IdRol)		
 );
