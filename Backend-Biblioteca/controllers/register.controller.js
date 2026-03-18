@@ -1,7 +1,6 @@
 import { registerModel } from "../models/register.model.js";
 import { SALTROUNDS } from "../Configurations.js";
 import bcryp from "bcrypt"
-import e from "express";
 
 export const registerController = async(req, res) => {
     try {
