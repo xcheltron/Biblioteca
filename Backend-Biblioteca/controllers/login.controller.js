@@ -1,23 +1,28 @@
 import { loginModel } from "../models/login.model.js";
-import bcryp from "bcrypt"
+import bcrypt from "bcrypt";
 
-export const loginController = async (req, res) =>{
+export const loginController = async (req, res) => {
     try {
-        const { email, password } = req.body
-        const login = await loginModel(email)
+        const { email, password } = req.body;
 
-        console.log(login)
+        const login = await loginModel(email);
 
-        if (await bcryp.compareSync(password, login[0][0]._Password)){
-            res.status(200).json({"message":"Todo bien"})
+        if (!login || login.length === 0 || login[0].length === 0) {
+            return res.status(401).json({ message: "Email incorrecto" });
         }
-        else {
-            res.status(204).json({"message":"Contraseña incorrecta"})
-        }
-        res.status(204).json({"message":"Email incorrecto"})
-                
-    } catch (error) {
-        res.status(204).json({"message":"Hubo un error"})
-    }
 
-}
+        const user = login[0][0];
+
+        const match = await bcrypt.compare(password, user._Password);
+
+        if (!match) {
+            return res.status(401).json({ message: "Contraseña incorrecta" });
+        }
+
+        return res.status(200).json({
+            message: "Login exitoso",
+            email: email});
+  } catch (error) {
+    return res.status(500).json({ message: "Hubo un error" });
+  }
+};
