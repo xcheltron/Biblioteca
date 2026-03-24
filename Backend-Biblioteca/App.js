@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import connection from "./dababase.js";
+import morgan from "morgan";
 //RUTAS
 import routerRol from "./routes/rol.routes.js";
 import routerRegister from "./routes/register.routes.js";
@@ -12,6 +13,7 @@ import { PORT } from "./Configurations.js";
 const app = express();
 
 //configurations
+app.use(morgan("dev"));
 app.use(express.json())
 app.use(cors())
 
