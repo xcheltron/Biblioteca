@@ -57,6 +57,8 @@ public class HomeController implements Initializable{
 
     @FXML
     void HandlerAgregarLibro(ActionEvent event) {
+        cleanScene();
+
         SceneMannager.StageSwitched("viewInsertBook.fxml");
     }
 
@@ -84,9 +86,14 @@ public class HomeController implements Initializable{
         }
     }
 
+    private void cleanScene(){
+        isLibrosVisible = false;
+        isPrestamosVisible = false;
+        isUsuariosVisible = false;
+    }
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        // TODO Auto-generated method stub
         String name = UserSesion.getInstance().getName();
 
         lblBienvenida.setText(lblBienvenida.getText()+" "+name.toUpperCase());
