@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.controllers.BookInsertController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="335.0">
+         <children>
+            <Label text="INSERTAR LIBRO">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Insertar datos del libro">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtAutor" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Autor*">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="txtNombreLibro" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Titulo de la obra*">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="txtSubtitulo" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Subtitulo de la obra">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="txtAño" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Año de la obra ej: 1967">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Cantidad:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+
+                  <Spinner fx:id="spinnerCantidad" prefWidth="80.0"/>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#HandlerAgregar" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #0938F6;" text="Agregar" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#HandlerSalir" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #F63009;" text="Salir" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <Label fx:id="lblError" text="Label" visible="false">
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="30.0" top="30.0" />
+         </padding>
+      </VBox>
+      <ImageView fitHeight="418.0" fitWidth="421.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="50.0" />
+         </HBox.margin>
+         <image>
+            <Image url="@../images/libros.png" />
+         </image>
+      </ImageView>
+   </children>
+</HBox>

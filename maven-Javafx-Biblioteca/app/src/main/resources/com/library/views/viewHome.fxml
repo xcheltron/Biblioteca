@@ -8,8 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.controllers.HomeController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.controllers.HomeController">
    <children>
       <VBox prefHeight="400.0" prefWidth="213.0" style="-fx-background-color: #438F29;">
          <children>
@@ -54,16 +53,16 @@
             </Button>
          </children>
       </VBox>
-      <BorderPane prefHeight="450.0" prefWidth="507.0">
+      <BorderPane prefHeight="611.0" prefWidth="668.0">
          <center>
-            <ImageView fitHeight="352.0" fitWidth="389.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <ImageView fitHeight="363.0" fitWidth="440.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                <image>
                   <Image url="@../images/logo.png" />
                </image>
             </ImageView>
          </center>
          <top>
-            <Label text="BIENVENIDO AL SISTEMA BIBLIOTECA" BorderPane.alignment="CENTER">
+            <Label fx:id="lblBienvenida" text="BIENVENIDO AL SISTEMA BIBLIOTECA" BorderPane.alignment="CENTER">
                <font>
                   <Font size="25.0" />
                </font>

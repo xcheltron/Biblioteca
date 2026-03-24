@@ -1,15 +1,26 @@
 package com.library.controllers;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import com.library.SceneMannager;
+import com.library.models.UserSesion;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
-public class HomeController {
+public class HomeController implements Initializable{
 
     private static boolean isLibrosVisible = false;
     private static boolean isUsuariosVisible = false;
     private static boolean isPrestamosVisible = false;
 
+    
+    @FXML
+    private Label lblBienvenida;
 
     @FXML
     private Button btnConsultarLibro;
@@ -29,6 +40,7 @@ public class HomeController {
     @FXML
     private Button btnConsultarUsuario;
 
+
     //LIBROS
     @FXML
     void btnActivarLibros(ActionEvent event) {
@@ -45,7 +57,7 @@ public class HomeController {
 
     @FXML
     void HandlerAgregarLibro(ActionEvent event) {
-
+        SceneMannager.StageSwitched("viewInsertBook.fxml");
     }
 
     //Usuarios
@@ -71,4 +83,14 @@ public class HomeController {
             btn.prefHeight(0);
         }
     }
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        // TODO Auto-generated method stub
+        String name = UserSesion.getInstance().getName();
+
+        lblBienvenida.setText(lblBienvenida.getText()+" "+name.toUpperCase());
+    }
+
+    
 }

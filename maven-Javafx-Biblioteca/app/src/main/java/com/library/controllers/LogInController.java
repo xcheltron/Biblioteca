@@ -2,7 +2,6 @@ package com.library.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -16,6 +15,7 @@ import java.util.Scanner;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.library.SceneMannager;
+import com.library.models.UserSesion;
 
 public class LogInController {
 
@@ -79,14 +79,13 @@ public class LogInController {
                     .getAsJsonObject();
 
             if (gsonObj.has("message")) {
-                String mensaje = gsonObj.get("message").getAsString();
+                //String mensaje = gsonObj.get("message").getAsString();
+                String name = gsonObj.get("name").getAsString();
+                String emailBackend = gsonObj.get("email").getAsString();
+                String number = gsonObj.get("number").getAsString();
+                String rol = gsonObj.get("rol").getAsString();
 
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Resultado");
-                alert.setHeaderText("Estado del login");
-                alert.setContentText(mensaje);
-
-                alert.showAndWait();
+                UserSesion.CreateSession(name, emailBackend, number, rol);
 
                 SceneMannager.StageSwitched("viewHome.fxml");
             }
