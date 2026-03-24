@@ -2,6 +2,7 @@ package com.library.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -11,6 +12,10 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
+
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.library.SceneMannager;
 
 public class LogInController {
 
@@ -69,7 +74,22 @@ public class LogInController {
             }
             scanner.close();
 
-            label1.setText(response.toString());
+            JsonObject gsonObj = JsonParser
+                    .parseString(response.toString())
+                    .getAsJsonObject();
+
+            if (gsonObj.has("message")) {
+                String mensaje = gsonObj.get("message").getAsString();
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Resultado");
+                alert.setHeaderText("Estado del login");
+                alert.setContentText(mensaje);
+
+                alert.showAndWait();
+
+                SceneMannager.StageSwitched("viewHome.fxml");
+            }
 
         } catch (Exception e) {
             label1.setText("Error: " + e.getMessage());

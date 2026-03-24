@@ -21,7 +21,7 @@ CREATE PROCEDURE register(
 		LIMIT 1;
 		
 		INSERT INTO person (idRol, _Name, Phone_number, email, _Password) VALUES
-		(idrol, _Namerol, _Name_, _Phone_number, _email, _password_hashed);
+		(idrol, _Name_, _Phone_number, _email, _password_hashed);
 		
 		IF error_ocurred THEN
 			SELECT "Error ocurrido" AS mensaje;

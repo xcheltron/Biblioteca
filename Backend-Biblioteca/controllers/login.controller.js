@@ -21,7 +21,10 @@ export const loginController = async (req, res) => {
 
         return res.status(200).json({
             message: "Login exitoso",
-            email: email});
+            email: email,
+            name: user._Name,
+            numer: user.Phone_number,
+            rol: user.NameRol});
   } catch (error) {
     return res.status(500).json({ message: "Hubo un error" });
   }

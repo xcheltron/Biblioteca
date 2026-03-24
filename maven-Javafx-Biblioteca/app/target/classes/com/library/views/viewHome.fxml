@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.controllers.HomeController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="213.0" style="-fx-background-color: #438F29;">
+         <children>
+            <Button fx:id="btnLibros" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnActivarLibros" prefHeight="34.0" prefWidth="213.0" style="-fx-background-color: #296115;" text="Libros">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnConsultarLibro" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" onAction="#HandlerConsultarLibro" prefHeight="0.0" prefWidth="213.0" style="-fx-background-color: #3E9E1B;" text="Consultar Libros" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnAgregarLibro" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" onAction="#HandlerAgregarLibro" prefHeight="0.0" prefWidth="213.0" style="-fx-background-color: #3E9E1B;" text="Agregar Libro" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnUsuarios" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnActivarUsuarios" prefHeight="34.0" prefWidth="213.0" style="-fx-background-color: #296115;" text="Usuarios">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnConsultarUsuario" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" onAction="#HandlerConsultarUsuario" prefHeight="0.0" prefWidth="213.0" style="-fx-background-color: #3E9E1B;" text="Consultar Libros" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnPrestamos" mnemonicParsing="false" prefHeight="34.0" prefWidth="213.0" style="-fx-background-color: #296115;" text="Prestamos">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <BorderPane prefHeight="450.0" prefWidth="507.0">
+         <center>
+            <ImageView fitHeight="352.0" fitWidth="389.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+         </center>
+         <top>
+            <Label text="BIENVENIDO AL SISTEMA BIBLIOTECA" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets top="20.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+      </BorderPane>
+   </children>
+</HBox>
