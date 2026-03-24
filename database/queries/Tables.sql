@@ -19,10 +19,11 @@ CREATE TABLE Rol(
 
 CREATE TABLE Book(
 	IdBook INT AUTO_INCREMENT PRIMARY KEY,
-	Author VARCHAR (50),
-	Name_Book VARCHAR(100),
-	publication_date DATE,
-	quantity INT	
+	Author VARCHAR (50) NOT NULL,
+	Name_Book VARCHAR(100) UNIQUE NOT NULL,
+	Sub_Title VARCHAR(70) DEFAULT "not sub_title",
+	publication_date INT NOT NULL,
+	quantity INT NOT NULL DEFAULT 1	
 );
 
 CREATE TABLE Loan(

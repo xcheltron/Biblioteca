@@ -3,7 +3,7 @@ DELIMITER $$
 		in _author VARCHAR(50),
 		in _Name_book VARCHAR(100),
 		in _sub_title VARCHAR(70),
-		in _publication_date date,
+		in _publication_date int,
 		in _quantity int
 	)
 	BEGIN
