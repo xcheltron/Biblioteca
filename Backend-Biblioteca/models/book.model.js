@@ -12,3 +12,12 @@ export const addBookModel = (author, Name_Book, Sub_Title, publication_date, qua
     );
   });
 };
+
+export const consultGeneralBookModel = (page) => {
+  return new Promise((resolve, reject) => {
+    connection.query("CALL consultGeneralBook(?)", [page],(err, results) =>{
+      if (err) reject(err);
+        else resolve(results);
+    });
+  });
+};
