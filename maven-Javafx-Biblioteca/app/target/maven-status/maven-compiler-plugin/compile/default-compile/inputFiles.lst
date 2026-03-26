@@ -1,6 +1,8 @@
 E:\PROGRAMACION\Biblioteca\maven-Javafx-Biblioteca\app\src\main\java\com\library\App.java
+E:\PROGRAMACION\Biblioteca\maven-Javafx-Biblioteca\app\src\main\java\com\library\controllers\BookConsultGeneral.java
 E:\PROGRAMACION\Biblioteca\maven-Javafx-Biblioteca\app\src\main\java\com\library\controllers\BookInsertController.java
 E:\PROGRAMACION\Biblioteca\maven-Javafx-Biblioteca\app\src\main\java\com\library\controllers\HomeController.java
 E:\PROGRAMACION\Biblioteca\maven-Javafx-Biblioteca\app\src\main\java\com\library\controllers\LogInController.java
+E:\PROGRAMACION\Biblioteca\maven-Javafx-Biblioteca\app\src\main\java\com\library\models\Book.java
 E:\PROGRAMACION\Biblioteca\maven-Javafx-Biblioteca\app\src\main\java\com\library\models\UserSesion.java
 E:\PROGRAMACION\Biblioteca\maven-Javafx-Biblioteca\app\src\main\java\com\library\SceneMannager.java

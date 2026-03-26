@@ -52,7 +52,9 @@ public class HomeController implements Initializable{
 
     @FXML
     void HandlerConsultarLibro(ActionEvent event) {
+        cleanScene();
 
+        SceneMannager.StageSwitched("viewConsultaGeneralLibro.fxml");
     }
 
     @FXML

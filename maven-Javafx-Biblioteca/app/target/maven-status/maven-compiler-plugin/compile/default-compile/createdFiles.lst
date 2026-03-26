@@ -3,4 +3,7 @@ com\library\App.class
 com\library\controllers\HomeController.class
 com\library\models\UserSesion.class
 com\library\controllers\LogInController.class
+com\library\controllers\BookConsultGeneral$1.class
+com\library\models\Book.class
+com\library\controllers\BookConsultGeneral.class
 com\library\SceneMannager.class

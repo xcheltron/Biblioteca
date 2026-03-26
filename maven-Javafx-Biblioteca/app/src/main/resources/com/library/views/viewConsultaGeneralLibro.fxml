@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.controllers.BookConsultGeneral">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Label text="CONSULTA GENERAL">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" top="30.0" />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#HandlerSalir" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #F63009;" text="Salir" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="340.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="tableBook" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="columnId" prefWidth="51.0" text="Id" />
+          <TableColumn fx:id="columnAutor" prefWidth="138.0" text="Autor" />
+            <TableColumn fx:id="columnTitulo" prefWidth="208.0" text="Nombre del libro" />
+            <TableColumn fx:id="columnSubtitulo" prefWidth="143.0" text="Subtitulo" />
+            <TableColumn fx:id="columnage" prefWidth="111.0" text="Año" />
+            <TableColumn fx:id="columncantidad" prefWidth="68.0" text="Cantidad" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnRetroceder" mnemonicParsing="false" onAction="#handlerRetroceder" text="&lt;&lt; Retroceder">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnAvanzar" mnemonicParsing="false" onAction="#handlerAvanzar" prefHeight="25.0" prefWidth="94.0" text="Avanzar &gt;&gt;">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
